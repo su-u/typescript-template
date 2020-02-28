@@ -9,8 +9,7 @@ module.exports = merge(common, {
     minimize: true,
   },
   module: {
-    rules: [
-    ],
+    rules: [],
   },
   resolve: {
     plugins: [new TsconfigPathsPlugin({ configFile: 'tsconfig.prod.json' })],

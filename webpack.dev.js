@@ -7,7 +7,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = merge(common, {
   mode: 'development',
   output: {
-      sourceMapFilename: 'bundle.js.map',
+    sourceMapFilename: 'bundle.js.map',
   },
   devtool: 'inline-source-map',
   watchOptions: {

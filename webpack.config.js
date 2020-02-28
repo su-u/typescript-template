@@ -26,14 +26,12 @@ module.exports = {
         use: ['thread-loader', 'cache-loader', 'babel-loader'],
         include: path.resolve('./src'),
         exclude: /node_modules/,
-      }
+      },
     ],
   },
   resolve: {
     extensions: ['.ts', '.js', '.json'],
     plugins: [],
   },
-  plugins: [
-    new HardSourceWebpackPlugin(),
-  ],
+  plugins: [new HardSourceWebpackPlugin()],
 };

@@ -10,7 +10,7 @@
     "build:p": "webpack --config webpack.prod.js --display-error-details --progress",
     "watch": "yarn run build:d --watch",
     "execwatch": "nodemon build/index.js",
-    "prettier:fix": "prettier --write ./src/**/*.{ts,js} ./src/*.{ts,js} ./.js"
+    "prettier:fix": "prettier --write ./src/**/*.{ts,js} ./src/*.{ts,js} ./*.js"
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",
