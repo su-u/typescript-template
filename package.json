@@ -10,7 +10,9 @@
     "build:p": "webpack --config webpack.prod.js --display-error-details --progress",
     "watch": "yarn run build:d --watch",
     "execwatch": "nodemon build/index.js",
-    "prettier:fix": "prettier --write ./src/**/*.{ts,js} ./src/*.{ts,js} ./*.js"
+    "prettier:fix": "prettier --write ./src/**/*.{ts,js} ./src/*.{ts,js} ./*.js",
+    "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx  --fix ./src",
+    "lint:check": "eslint --ext .js,.jsx,.ts,.tsx ./src"
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",
