@@ -9,6 +9,7 @@ module.exports = {
   entry: {
     main: ['@babel/polyfill', path.resolve(__dirname, './src/index.ts')],
   },
+  target: 'node',
   module: {
     rules: [
       {
