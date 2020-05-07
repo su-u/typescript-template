@@ -3,6 +3,7 @@ const common = require('./webpack.config.js');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 
 module.exports = merge(common, {
   mode: 'development',
@@ -10,9 +11,6 @@ module.exports = merge(common, {
     sourceMapFilename: 'bundle.js.map',
   },
   devtool: 'inline-source-map',
-  watchOptions: {
-    poll: 500,
-  },
   module: {
     rules: [
       {
@@ -34,6 +32,7 @@ module.exports = merge(common, {
   plugins: [
     new CleanWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
+    new HardSourceWebpackPlugin(),
     // new webpack.DefinePlugin({
     //   'process.env': {
     //     NODE_ENV: JSON.stringify('development'),

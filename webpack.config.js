@@ -1,5 +1,4 @@
 const path = require('path');
-const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 
 module.exports = {
   output: {
@@ -7,7 +6,7 @@ module.exports = {
     filename: 'bundle.js',
   },
   entry: {
-    main: ['@babel/polyfill', path.resolve(__dirname, './src/index.ts')],
+    main: path.resolve(__dirname, './src/index.ts'),
   },
   target: 'node',
   module: {
