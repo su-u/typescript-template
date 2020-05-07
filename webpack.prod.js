@@ -9,7 +9,17 @@ module.exports = merge(common, {
     minimize: true,
   },
   module: {
-    rules: [],
+    rules: [
+      {
+        test: /\.(ts|tsx)?$/,
+        use: {
+          loader: 'ts-loader',
+          options: {
+            configFile: 'tsconfig.prod.json',
+          },
+        },
+      },
+    ],
   },
   resolve: {
     plugins: [new TsconfigPathsPlugin({ configFile: 'tsconfig.prod.json' })],
