@@ -19,7 +19,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",
-    "@babel/polyfill": "^7.8.3",
     "@babel/preset-env": "^7.8.6",
     "@babel/preset-typescript": "^7.8.3",
     "@types/jest": "^25.2.1",
@@ -37,8 +36,6 @@
     "eslint-plugin-react": "^7.18.3",
     "hard-source-webpack-plugin": "^0.13.1",
     "jest": "^26.0.1",
-    "log4js": "^6.1.1",
-    "log4js-extend": "^0.2.1",
     "nodemon": "^2.0.2",
     "prettier": "^1.19.1",
     "thread-loader": "^2.1.3",
