@@ -13,7 +13,7 @@ module.exports = {
     rules: [
       {
         enforce: 'pre',
-        test: /\.(js|jsx|ts|tsx)$/,
+        test: /\.(js|ts)$/,
         include: path.resolve('./src'),
         exclude: /(node_modules|dist)/,
         loader: 'eslint-loader',
@@ -22,7 +22,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(js|jsx|ts|tsx)$/,
+        test: /\.(js|ts)$/,
         use: ['thread-loader', 'cache-loader', 'babel-loader'],
         include: path.resolve('./src'),
         exclude: /node_modules/,
@@ -31,7 +31,6 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.js', '.json'],
-    plugins: [],
   },
   plugins: [new HardSourceWebpackPlugin()],
 };

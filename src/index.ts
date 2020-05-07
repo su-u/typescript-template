@@ -1,5 +1,5 @@
-const main = () => {
-  console.log('aaa');
+export const main = () => {
+  return 1;
 };
 
 main();
